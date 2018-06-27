@@ -1,0 +1,57 @@
+{
+  "name": "macros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "jest --watch",
+    "client": "webpack -wd",
+    "start": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
+    "dev": "concurrently \"npm run client\" \"npm run start\""
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendmebiscuits/macros.git"
+  },
+  "author": "Thomas Lee",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "knex": "^0.14.6",
+    "lodash.debounce": "^4.0.8",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "node-fetch": "^2.1.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^4.37.10",
+    "webpack": "^4.11.1"
+  },
+  "devDependencies": {
+    "jest": "^23.1.0",
+    "react-test-renderer": "^16.4.0",
+    "webpack-cli": "^3.0.3"
+  }
+}

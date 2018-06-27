@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Macros Brah</title>
+    <script type='text/javascript'>
+      window.__PRELOADED_STATE__ = <%- JSON.stringify(preloadedState) -%>
+    </script>
+  </head>
+  <body>
+    <div id='root'><%- initialMarkup -%></div>
+    <script src='/bundle.js' charset='utf-8'></script>
+  </body>
+</html>

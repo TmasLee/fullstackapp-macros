@@ -1,0 +1,21 @@
+{
+  "data": {
+    "trackers": [
+      {
+        "name": "macros",
+        "date_created": "today",
+        "body": "keke"
+      },
+      {
+        "name": "strength",
+        "date_created": "today again",
+        "body": "xd"
+      },
+      {
+        "name": "lastone",
+        "date_created": "what u think",
+        "body": "xDDDDDD"
+      }
+    ]
+  }
+}
