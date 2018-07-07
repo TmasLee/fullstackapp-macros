@@ -1,6 +1,5 @@
 # dependencies
 /node_modules
 
-info.env
-
-/lib/db_models/db.js
+.env
+.sequelizerc
