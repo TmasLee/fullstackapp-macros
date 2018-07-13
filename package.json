@@ -5,9 +5,11 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "jest --watch",
-    "client": "webpack -wd",
+    "client": "webpack wd",
+    "build-webpack": "webpack -p",
     "start": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
-    "dev": "concurrently \"npm run client\" \"npm run start\""
+    "dev": "concurrently \"npm run client\" \"npm run start\"",
+    "deploy": "concurrently \"npm run build-webpack\" \"npm run start\"" 
   },
   "babel": {
     "presets": [
@@ -25,6 +27,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.0",
+    "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
@@ -32,6 +35,7 @@
     "lodash.debounce": "^4.0.8",
     "mysql2": "^1.5.3",
     "node-fetch": "^2.1.2",
+    "nodemon": "^1.18.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

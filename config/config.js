@@ -3,7 +3,7 @@ import Sequelize from 'sequelize';
 
 const Op = Sequelize.Op;
 dotenv.load();
-
+console.log(process.env.DB_NAME);
 module.exports = {
   development: {
     username: process.env.DB_USER,

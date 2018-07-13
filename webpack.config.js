@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const config = {
   resolve: {
@@ -12,6 +13,11 @@ const config = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production') }
+    })
+  ],
   module: {
     rules: [
       {test: /\.js$/, exclude: /node_modules/, use: 'babel-loader'}
