@@ -1,9 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
   var foods = sequelize.define('foods', {
     name: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(150),
       defaultValue: 'Food',
       allowNull: true
+    },
+    servings: {
+      type: DataTypes.INTEGER(2),
+      defaultValue: 0,
+      allowNull: false
     },
     calories: {
       type: DataTypes.INTEGER(4),
@@ -42,6 +47,7 @@ module.exports = (sequelize, DataTypes) => {
       protein: food.macros[1],
       fat: food.macros[2],
       carbs: food.macros[3],
+      servings: food.macros[4],
       createdAt: (new Date()).toISOString().substring(0,19).replace('T',' '),
       updatedAt: (new Date()).toISOString().substring(0,19).replace('T',' ')
     });
