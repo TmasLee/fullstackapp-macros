@@ -28,9 +28,10 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   foods.getAllFoods = function(){
-    return sequelize.query('SELECT * FROM FOODS ORDER BY id DESC').spread((results,metadata)=>{
-      return results;
-    })
+    return sequelize.query('SELECT * FROM FOODS ORDER BY id DESC')
+      .spread((results,metadata)=>{
+        return results;
+      })
   };
 
   foods.postFood = function(food){
@@ -54,8 +55,18 @@ module.exports = (sequelize, DataTypes) => {
 
   };
 
-  foods.removeFood = function(){
-
+  foods.deleteFood = function(id){
+    return foods.destroy({
+      where: {
+        id: id
+      }
+    })
+    .then(()=>{
+      return sequelize.query('SELECT * FROM FOODS ORDER BY id DESC')
+        .spread((results,metadata)=>{
+          return results;
+        });
+    })
   };
   
   return foods;
