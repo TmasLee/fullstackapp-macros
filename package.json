@@ -5,6 +5,7 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "jest --watch",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "client": "webpack -wd",
     "build-webpack": "webpack -p",
     "start": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
@@ -46,6 +47,7 @@
     "sequelize-cli": "^4.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.8",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
@@ -55,7 +57,7 @@
     "cors": "^2.8.4",
     "jest": "^23.1.0",
     "react-test-renderer": "^16.4.0",
-    "webpack": "^4.15.1",
+    "webpack": "^3.12.0",
     "webpack-cli": "^3.0.3"
   },
   "engines": {

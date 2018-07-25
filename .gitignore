@@ -2,5 +2,7 @@
 /node_modules
 
 /public
+/.storybook
+/lib/__tests__
 
 .env
